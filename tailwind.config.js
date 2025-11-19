@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       colors: {
-    background: "rgba(233, 17, 17, 0.15)",
+    background: "rgba(48, 35, 233, 0)",
     textPrimary: "#111111",
       },
       fontFamily: {

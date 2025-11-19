@@ -17,7 +17,7 @@ export default function Home() {
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="p-6 bg-[rgba(255,255,255,0.02)] rounded">
                         <div className="text-sm text-gray-400">Experience</div>
-                        <div className="text-xl font-semibold mt-2">3+ years</div>
+                        <div className="text-xl font-semibold mt-2">1+ years</div>
                     </div>
                     <div className="p-6 bg-[rgba(255,255,255,0.02)] rounded">
                         <div className="text-sm text-gray-400">Open to</div>
