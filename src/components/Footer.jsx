@@ -6,9 +6,9 @@ export default function Footer() {
             <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
                 <div className="text-sm text-gray-400">© {new Date().getFullYear()} Pattin Mugambi. All rights reserved.</div>
                 <div className="flex space-x-4 mt-3 md:mt-0">
-                    <a href="#" className="text-gray-300 hover:text-white">GitHub</a>
-                    <a href="#" className="text-gray-300 hover:text-white">LinkedIn</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Twitter</a>
+                    <a href="https://github.com/Ranking-254" className="text-gray-300 hover:text-white">GitHub</a>
+                    <a href="https://www.linkedin.com/in/pattin-njue-a789412b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-300 hover:text-white">LinkedIn</a>
+                    <a href="https://x.com/NjuePattin?t=PzrpeIWy5cPN7hFZ_YfFlw&s=09" className="text-gray-300 hover:text-white">Twitter</a>
                    
 
 
