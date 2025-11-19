@@ -20,7 +20,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--brand)] flex items-center justify-center text-black font-bold">P</div>
+                    <div className="w-10 h-10 rounded-full bg-[var(--brand)] flex items-center justify-center text-black font-bold">🌀</div>
                     <div>
                         <div className="text-white font-bold">Pattin Mugambi</div>
                         <div className="text-xs text-muted">Software Engineer</div>

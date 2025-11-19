@@ -1,3 +1,7 @@
+import jobhunt from '../assets/jobhunt.jpg';
+import portfolio from '../assets/portfolio.jpg';
+import agrismart from '../assets/agrismart.jpg';
+
 const projects = [
     {
         id: 1,
@@ -5,15 +9,15 @@ const projects = [
         summary: 'Full stack job listing platform with auth & profiles (demo).',
         tech: ['React', 'Node', 'MongoDB'],
         link: '#',
-        image: '/assets/jobhunt.png'
+        image: jobhunt
     },
     {
         id: 2,
-        title: 'React Portfolio (this)',
+        title: 'React Portfolio ',
         summary: 'My personal portfolio showcasing projects & contact.',
         tech: ['React', 'Tailwind'],
-        link: '#',
-        image: '/assets/portfolio.png'
+        link: 'pattin-portfolio.vercel.app',
+        image: portfolio
     },
     {
         id: 3,
@@ -21,7 +25,7 @@ const projects = [
         summary: 'Farm produce marketplace MVP for local farmers.',
         tech: ['React', 'Stripe'],
         link: '#',
-        image: '/assets/agrismart.png'
+        image: agrismart
     },
 ]
 

@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #5f0f40;
+  --color-background: #144552;
   --color-textPrimary: #111111;
   --font-inter: "Inter", "sans-serif";
 }
