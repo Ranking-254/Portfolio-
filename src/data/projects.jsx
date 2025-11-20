@@ -1,6 +1,6 @@
-import jobhunt from '../assets/jobhunt.jpg';
-import portfolio from '../assets/portfolio.jpg';
-import agrismart from '../assets/agrismart.jpg';
+import jobhunt from '../assets/jobhunt.webp';
+import portfolio from '../assets/portfolio.webp';
+import agrismart from '../assets/agrismart.webp';
 
 const projects = [
     {

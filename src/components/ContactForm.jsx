@@ -25,7 +25,16 @@ export default function ContactForm() {
             <textarea required name="message" value={form.message} onChange={handleChange} rows="6" className="w-full mt-1 p-3 bg-[var(--bg)] border border-gray-800 rounded" />
             <div className="mt-4">
                 <button type="submit" className="px-5 py-3 bg-[var(--brand)] text-black rounded font-semibold">Send</button>
-                <a href="https://formspree.io/f/yourformid" target="_blank" rel="noreferrer" className="ml-3 text-sm text-gray-400">Or connect via Formspree</a>
+                <form action="https://formspree.io/f/xnnwryop" method="POST" target="_blank" className="inline ml-3">
+  <input type="hidden" name="name" value={form.name} />
+  <input type="hidden" name="email" value={form.email} />
+  <input type="hidden" name="message" value={form.message} />
+  <input type="hidden" name="_next" value="https://pattin-portfolio.vercel.app/contact" />
+  <button type="submit" className="text-sm text-gray-400 underline">
+    Or connect via Formspree
+  </button>
+</form>
+
             </div>
         </form>
     )

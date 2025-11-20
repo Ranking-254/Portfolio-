@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
             className="block bg-[rgba(255,255,255,0.03)] border border-gray-800 rounded-lg overflow-hidden"
         >
             <div className="h-44 bg-gradient-to-br from-black to-gray-900 flex items-center justify-center">
-                {project.image ? <img src={project.image} alt={project.title} className="object-cover h-full w-full" />
+                {project.image ? <img src={project.image} alt={project.title} className="object-cover h-full w-full" loading="lazy" />
                     : <div className="text-muted">{project.title}</div>}
             </div>
             <div className="p-4">
