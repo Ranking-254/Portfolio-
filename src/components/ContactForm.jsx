@@ -12,7 +12,7 @@ export default function ContactForm() {
         // Open user's email client with prefilled content
         const subject = encodeURIComponent(`Contact from ${form.name} via portfolio`)
         const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-        window.location.href = `mailto:your.email@domain.com?subject=${subject}&body=${body}`
+        window.location.href = `mailto:12pattin@gmail.com?subject=${subject}&body=${body}`
     }
 
     return (
