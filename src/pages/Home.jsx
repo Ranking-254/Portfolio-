@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import RotatingText from '../components/RotatingText'
-import LogoWall from '../components/LogoLoop' // Note: This might be named LogoLoop inside, but the file import is fine.
+import LogoWall from '../components/LogoLoop'
 
 // Define your logos
 const logoData = [
@@ -16,7 +16,7 @@ const logoData = [
 
 export default function Home() {
   return (
-    <section className="max-w-4xl mx-auto pb-20">
+    <section className="w-full max-w-full overflow-hidden px-4 md:px-6 mx-auto pb-20pt-16 md:pt-0">
       <motion.div 
         initial={{ opacity: 0, y: 10 }} 
         animate={{ opacity: 1, y: 0 }} 
@@ -24,6 +24,7 @@ export default function Home() {
       >
         <h1 className="text-4xl md:text-6xl font-bold">Pattin Mugambi</h1>
 
+        {/* --- YOUR HERO SECTION (Kept exactly as you shared) --- */}
         <div className="mt-3 flex flex-wrap items-center gap-2 text-xl md:text-2xl font-semibold text-gray-200">
           <span>Expert in</span>
           <RotatingText
@@ -39,48 +40,65 @@ export default function Home() {
             rotationInterval={2000}
           />
         </div>
+        {/* ----------------------------------------------------- */}
 
         <p className="mt-4 text-gray-300 text-lg">
           Software Engineer • Frontend & Full-Stack dev • Building clean, high-performance web apps.
         </p>
 
         <div className="mt-8 flex gap-4">
-          <Link to="/projects" className="px-6 py-3 bg-[var(--brand)] text-white-950 rounded font-semibold hover:opacity-90 transition">
+          <a href="#projects" className="px-6 py-3 bg-[var(--brand)] text-white rounded font-semibold hover:opacity-90 transition">
             See Projects
-          </Link>
-          <Link to="/contact" className="px-6 py-3 border border-gray-700 rounded text-gray-200 hover:bg-white/5 transition">
+          </a>
+          <a href="#contact" className="px-6 py-3 border border-gray-700 rounded text-gray-200 hover:bg-white/5 transition">
             Contact
-          </Link>
+          </a>
         </div>
 
-        {/* ... (Your stats grid here) ... */}
-        
-        {/* --- FIXED LOGO LOOP SECTION --- */}
-        <div className="mt-20">
-            <h3 className="text-xl font-semibold text-center mb-8 text-gray-400"> Technologies I use </h3>
-            <div style={{ height: '100px', width: '100%', position: 'relative' }}>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-6 bg-[rgba(255,255,255,0.02)] border border-white/5 rounded">
+            <div className="text-sm text-gray-400">Experience</div>
+            <div className="text-xl font-semibold mt-2">1+ years</div>
+          </div>
+          <div className="p-6 bg-[rgba(255,255,255,0.02)] border border-white/5 rounded">
+            <div className="text-sm text-gray-400">Open to</div>
+            <div className="text-xl font-semibold mt-2">Full-time / Freelance</div>
+          </div>
+          <div className="p-6 bg-[rgba(255,255,255,0.02)] border border-white/5 rounded">
+            <div className="text-sm text-gray-400">Location</div>
+            <div className="text-xl font-semibold mt-2">Nairobi, Kenya</div>
+          </div>
+        </div>
+
+        {/* --- FIXED LOGO WALL (Mobile Friendly) --- */}
+        <div className="mt-12 md:mt-20">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-400"> Technologies I use </h3>
+            
+            {/* Added height control: h-[120px] on mobile */}
+            <div className="h-[120px] md:h-[150px] w-full relative overflow-hidden">
                 <LogoWall
-                    logos={logoData} // FIX 1: Changed 'items' to 'logos'
-                    renderItem={(logo, index) => ( // FIX 2: Added renderItem to handle the object
+                    logos={logoData}
+                    renderItem={(logo, index) => (
                         <div key={index} className="flex flex-col items-center justify-center mx-4 gap-2">
                             <img 
                                 src={logo.imgUrl} 
                                 alt={logo.altText} 
-                                style={{ width: '50px', height: '50px', objectFit: 'contain' }} // Standardized size
+                                // Added size control: w-10 h-10 on mobile
+                                className="w-10 h-10 md:w-12 md:h-12 object-contain"
                             />
                             <span className="text-xs text-gray-500">{logo.altText}</span>
                         </div>
                     )}
                     direction='left'
                     pauseOnHover={true}
-                    size='clamp(3rem, 1rem + 10vmin, 10rem)'
+                    size='clamp(2rem, 1rem + 10vmin, 3rem)' // Reduced clamp size
                     duration='20s'
-                    bgColor='#060606' // Ensure this matches your background color
-                    bgAccentColor='#111111'
+                    bgColor='transparent'
+                    bgAccentColor='transparent'
                 />
             </div>
         </div>
-        {/* ----------------------------- */}
+        {/* ------------------------------------------ */}
 
       </motion.div>
     </section>

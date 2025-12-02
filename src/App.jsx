@@ -10,7 +10,7 @@ import Squares from './components/Squares' // <--- Import it
 
 export default function App() {
   return (
-    <div className="relative min-h-screen text-white font-inter bg-black selection:bg-cyan-500 selection:text-black">
+    <div className="relative min-h-screen w-full overflow-x-hidden text-white font-inter bg-black selection:bg-cyan-500 selection:text-black scroll-smooth">
       
       {/* --- BACKGROUND LAYER --- */}
       <div className="fixed inset-0 z-0 w-full h-full">
@@ -30,19 +30,23 @@ export default function App() {
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
         
-        <main className="flex-1 container mx-auto px-6 py-10">
-          <section id="home" className="min-h-[calc(100vh-80px)] flex items-center justify-center">
-            <Home />
-          </section>
-          <section id="about" className="min-h-[calc(100vh-80px)] flex items-center justify-center">
-            <About />
-          </section>
-          <section id="projects" className="min-h-[calc(100vh-80px)] flex items-center justify-center">
-            <Projects />
-          </section>
-          <section id="contact" className="min-h-[calc(100vh-80px)] flex items-center justify-center">
-            <Contact />
-          </section>
+        <main className="container mx-auto px-6 w-full max-w-[100vw] overflow-hidden">
+          <section id="home" className="w-full min-h-screen flex flex-col justify-start md:justify-center pt-32 md:pt-20">
+  <Home />
+</section>
+
+<section id="about" className="min-h-screen flex items-center justify-center py-12 md:py-20">
+  <About />
+</section>
+
+{/* Projects usually needs MORE height than screen, so just min-h-screen is safer */}
+<section id="projects" className="min-h-screen py-12 md:py-20">
+  <Projects />
+</section>
+
+<section id="contact" className="min-h-[80vh] flex items-center justify-center py-12 md:py-20">
+  <Contact />
+</section>
         </main>
         
         <Footer />

@@ -1,5 +1,21 @@
 
 @import "tailwindcss";
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+/* 👆 END PASTE 👆 */
+
+html {
+  scroll-behavior: smooth;
+}
 html {
   scroll-behavior: smooth;
 }

@@ -44,7 +44,7 @@ export default function Navbar() {
                     ))}
                     <a 
                         href="#contact" 
-                        className="ml-4 inline-block px-4 py-2 rounded-md bg-[var(--brand)] text-black font-semibold text-sm hover:opacity-90 transition-opacity"
+                        className="ml-4 inline-block px-4 py-2 rounded-md bg-[var(--brand)] text-white font-semibold text-sm hover:opacity-90 transition-opacity"
                     >
                         Hire Me
                     </a>
