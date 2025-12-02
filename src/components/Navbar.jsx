@@ -1,13 +1,12 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
+// 1. Updated links to point to IDs (#) instead of routes (/)
 const links = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/projects', label: 'Projects' },
-   
-    { to: '/contact', label: 'Contact' }
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' }
 ]
 
 export default function Navbar() {
@@ -16,29 +15,42 @@ export default function Navbar() {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-[var(--surface)] border-b border-gray-800"
+            // Added 'fixed w-full z-50' to keep navbar at the top while scrolling
+            className="fixed w-full z-50 bg-[var(--surface)] border-b border-gray-800 backdrop-blur-md bg-opacity-90"
         >
             <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+                
+                {/* Logo Section */}
                 <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--brand)] flex items-center justify-center text-black font-bold">🌀</div>
+                    <div className="w-10 h-10 rounded-full bg-[var(--brand)] flex items-center justify-center text-black font-bold">
+                        🌀
+                    </div>
                     <div>
-                        <div className="text-white font-bold">Pattin Mugambi</div>
-                        <div className="text-xs text-muted">Software Engineer</div>
+                        <a href="#home" className="text-white font-bold block leading-tight">Pattin Mugambi</a>
+                        <span className="text-xs text-muted text-gray-400">Software Engineer</span>
                     </div>
                 </div>
 
+                {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6 items-center">
                     {links.map(l => (
-                        <NavLink key={l.to} to={l.to} className={({ isActive }) =>
-                            `text-sm ${isActive ? 'text-[var(--brand)] font-semibold' : 'text-gray-300 hover:text-white'}`
-                        }>
+                        <a 
+                            key={l.href} 
+                            href={l.href} 
+                            className="text-sm text-gray-300 hover:text-[var(--brand)] hover:font-semibold transition-colors"
+                        >
                             {l.label}
-                        </NavLink>
+                        </a>
                     ))}
-                    <a href="/contact" className="ml-4 inline-block px-4 py-2 rounded-md bg-[var(--brand)] text-black font-semibold text-sm">Hire Me</a>
+                    <a 
+                        href="#contact" 
+                        className="ml-4 inline-block px-4 py-2 rounded-md bg-[var(--brand)] text-black font-semibold text-sm hover:opacity-90 transition-opacity"
+                    >
+                        Hire Me
+                    </a>
                 </div>
 
-                {/* Mobile - simple */}
+                {/* Mobile Menu Button */}
                 <div className="md:hidden text-gray-300">
                     <MobileMenu links={links} />
                 </div>
@@ -48,18 +60,32 @@ export default function Navbar() {
 }
 
 function MobileMenu({ links }) {
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
     return (
         <div className="relative">
-            <button onClick={() => setOpen(v => !v)} className="p-2 rounded bg-gray-800">
+            <button onClick={() => setOpen(v => !v)} className="p-2 rounded bg-gray-800 hover:bg-gray-700 transition">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
             </button>
+            
             {open && (
-                <div className="absolute right-0 mt-2 w-44 bg-[var(--surface)] border border-gray-800 rounded shadow-lg p-3 space-y-2">
+                <div className="absolute right-0 mt-2 w-44 bg-neutral-900 border border-gray-800 rounded shadow-lg p-3 space-y-2">
                     {links.map(l => (
-                        <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)} className="block text-gray-200">{l.label}</NavLink>
+                        <a 
+                            key={l.href} 
+                            href={l.href} 
+                            onClick={() => setOpen(false)} 
+                            className="block text-gray-200 hover:text-[var(--brand)] text-sm"
+                        >
+                            {l.label}
+                        </a>
                     ))}
-                    <a href="/contact" onClick={() => setOpen(false)} className="block mt-2 px-3 py-2 bg-[var(--brand)] text-black rounded text-center">Hire Me</a>
+                    <a 
+                        href="#contact" 
+                        onClick={() => setOpen(false)} 
+                        className="block mt-2 px-3 py-2 bg-[var(--brand)] text-black rounded text-center text-sm font-bold"
+                    >
+                        Hire Me
+                    </a>
                 </div>
             )}
         </div>

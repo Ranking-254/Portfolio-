@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 
 export default function Footer() {
@@ -11,7 +11,8 @@ export default function Footer() {
                     <a href="https://github.com/Ranking-254" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer"><FaGithub size={24} /></a>
                     <a href="https://www.linkedin.com/in/pattin-njue-a789412b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"> <FaLinkedin size={24} /></a>
                     <a href="https://x.com/NjuePattin?t=PzrpeIWy5cPN7hFZ_YfFlw&s=09" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><FaTwitter size={24} /></a>
-                   
+                    <a href="https://wa.me/+254716700151" className="text-gray-300 hover:text-white" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={24} /></a>
+                   <a href="https://www.instagram.com/pattin_njue?igsh=MWJqZjVqZjV2ZW56cg==" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><FaInstagram size={24} /></a>
 
 
                 </div>
