@@ -14,6 +14,7 @@ export default function ProjectCard({ project }) {
             </div>
             <div className="p-4">
                 <h3 className="font-semibold text-white">{project.title}</h3>
+                <h3 className="font-semibold text-sm text">{project.login}</h3>
                 <p className="text-sm text-gray-400 mt-1">{project.summary}</p>
                 <div className="mt-3 flex items-center justify-between">
                     <div className="text-xs text-muted">{project.tech.join(' • ')}</div>
