@@ -1,4 +1,4 @@
-import jobhunt from '../assets/jobhunt.webp';
+import jobhunt from '../assets/jobsearch.webp';
 import portfolio from '../assets/portfolio.webp';
 import Cinemaplus from '../assets/Cinemaplus.webp';
 import heavenly from '../assets/heavenly.webp';
@@ -8,10 +8,10 @@ import lengendary from '../assets/lengendary.webp';
 const projects = [
     {
         id: 1,
-        title: 'JobHunt - Job board',
+        title: 'JobPortal - Job board',
         summary: 'Full stack job listing platform with auth & profiles (demo).',
         tech: ['React', 'Node', 'MongoDB'],
-        link: '#',
+        link: 'https://seeker-employer.vercel.app/',
         image: jobhunt
     },
     {
