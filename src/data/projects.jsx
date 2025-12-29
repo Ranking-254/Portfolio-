@@ -2,6 +2,8 @@ import jobhunt from '../assets/jobhunt.webp';
 import portfolio from '../assets/portfolio.webp';
 import Cinemaplus from '../assets/Cinemaplus.webp';
 import heavenly from '../assets/heavenly.webp';
+import anana from '../assets/anana.webp';
+import lengendary from '../assets/lengendary.webp';
 
 const projects = [
     {
@@ -36,6 +38,22 @@ const projects = [
         tech: ['React', 'Vite', ,'Tailwind/CSS', 'Vercel and render hosting', 'modern JavaScript','mongodb'],
         link: 'https://heavenly-pos-1.vercel.app/',
         image: heavenly
+    },
+    {
+        id: 5,
+        title: 'Lengendary Backers',
+        summary: 'A full frontend website.',
+        tech: ['React', 'Vite', ,'Tailwind/CSS', 'Vercel and hosting', 'modern JavaScript',''],
+        link: 'https://lengendary-bakers.vercel.app/',
+        image:lengendary
+    },
+    {
+        id: 6,
+        title: 'Anana-Backers',
+        summary: 'A complete frontend website with cool features.',
+        tech: ['React', 'Vite', ,'Tailwind/CSS', 'Vercel hosting', 'modern JavaScript',''],
+        link: 'https://anana-backers.vercel.app/',
+        image: anana
     },
 ]
 
