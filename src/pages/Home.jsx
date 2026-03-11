@@ -12,6 +12,11 @@ const logoData = [
   { imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png', altText: "Express" },
   { imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg', altText: "Tailwind" },
   { imgUrl: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg', altText: "Git" },
+  { imgUrl: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg", altText: "Docker" },
+  { imgUrl: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg", altText: "Supabase" },
+  { imgUrl: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg", altText: "Next.js" },
+  { imgUrl: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg", altText: "TypeScript" },
+
 ]
 
 export default function Home() {
