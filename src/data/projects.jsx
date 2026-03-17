@@ -4,10 +4,19 @@ import Cinemaplus from '../assets/Cinemaplus.webp';
 import heavenly from '../assets/heavenly.webp';
 import anana from '../assets/anana.webp';
 import lengendary from '../assets/lengendary.webp';
+import systemx from '../assets/systemx.png';
 
 const projects = [
     {
         id: 1,
+        title: 'SYSTX(systemx)',
+        summary: 'Official website for SYSTX.INFRA.',
+        tech: ['React', 'supabase', 'Tailwind'],
+        link: 'https://systx-infra.vercel.app/',
+        image: systemx
+    },
+    {
+        id: 2,
         title: 'JobPortal - Job board',
         summary: 'Full stack job listing platform with auth & profiles (demo).',
         tech: ['React', 'Node', 'MongoDB'],
@@ -15,7 +24,7 @@ const projects = [
         image: jobhunt
     },
     {
-        id: 2,
+        id: 3,
         title: 'React Portfolio ',
         summary: 'My personal portfolio showcasing projects & contact.',
         tech: ['React', 'Tailwind'],
@@ -23,7 +32,7 @@ const projects = [
         image: portfolio
     },
     {
-        id: 3,
+        id: 4,
         title: 'Cinema plus+',
         summary: 'Cinema Plus+ is aFull stack project with a modern, responsive platform for showcasing events and enabling professional bookings with ease.',
         tech: ['React', 'Vite', 'Clerk auth','Tailwind/CSS', 'Vercel and render hosting', 'modern JavaScript','mongodb'],
@@ -31,7 +40,7 @@ const projects = [
         image: Cinemaplus
     },
     {
-        id: 4,
+        id: 5,
         title: 'Heavenly point of sale',
         login: 'username:demo password:demo',
         summary: ' Heavenly Point of Sale is a comprehensive full-stack application designed to streamline retail operations, featuring user authentication, product management, sales tracking, to enhance business efficiency.',
@@ -40,7 +49,7 @@ const projects = [
         image: heavenly
     },
     {
-        id: 5,
+        id: 6,
         title: 'Lengendary Backers',
         summary: 'A full frontend website.',
         tech: ['React', 'Vite', ,'Tailwind/CSS', 'Vercel and hosting', 'modern JavaScript',''],
@@ -48,7 +57,7 @@ const projects = [
         image:lengendary
     },
     {
-        id: 6,
+        id: 7,
         title: 'Anana-Backers',
         summary: 'A complete frontend website with cool features.',
         tech: ['React', 'Vite', ,'Tailwind/CSS', 'Vercel hosting', 'modern JavaScript',''],
