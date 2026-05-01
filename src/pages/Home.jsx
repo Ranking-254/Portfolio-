@@ -33,7 +33,7 @@ export default function Home() {
         <div className="mt-3 flex flex-wrap items-center gap-2 text-xl md:text-2xl font-semibold text-gray-200">
           <span>Expert in</span>
           <RotatingText
-            texts={['React', 'Node.js', 'MongoDB', 'MERN Stack']}
+            texts={['React', 'Node.js', 'MongoDB', 'MERN Stack' ,'Server Infrastructure',]}
             mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
