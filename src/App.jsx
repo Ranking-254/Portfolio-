@@ -7,6 +7,14 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Squares from './components/Squares' // <--- Import it
+import { clarity } from 'react-microsoft-clarity';
+
+// This grabs the ID you just added to Vercel
+const clarityId = import.meta.env.VITE_CLARITY_ID;
+
+if (clarityId) {
+  clarity.init(clarityId);
+}
 
 export default function App() {
   return (
