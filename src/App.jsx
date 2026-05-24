@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom' // <--- Removed BrowserRouter from here
+import React, { useEffect } from 'react' // <--- Added useEffect
+import { Routes, Route, useLocation } from 'react-router-dom' // <--- Added useLocation
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -10,14 +10,36 @@ import Squares from './components/Squares'
 import { clarity } from 'react-microsoft-clarity';
 import AllProjects from './pages/AllProjects'
 
-// This grabs the ID you just added to Vercel
 const clarityId = import.meta.env.VITE_CLARITY_ID;
-
 if (clarityId) {
   clarity.init(clarityId);
 }
 
 export default function App() {
+  const location = useLocation();
+
+  // DYNAMIC CROSS-PAGE SCROLL LISTENER
+  useEffect(() => {
+    // If the path contains a hash (e.g., /#about)
+    if (location.hash) {
+      // Remove the '#' to get the target container id string ('about')
+      const targetId = location.hash.replace('#', '');
+      
+      // Give the homepage layout a brief moment to finish drawing to the DOM
+      const timer = setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150); // 150ms allows components to mount safely
+
+      return () => clearTimeout(timer);
+    } else {
+      // If there's no hash (e.g. visiting a clean / or /all-projects page), jump to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]); // Triggers every time the URL changes
+
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden text-white font-inter bg-black selection:bg-cyan-500 selection:text-black scroll-smooth">
       
@@ -38,7 +60,7 @@ export default function App() {
         <Navbar />
         
         <main className="container mx-auto px-6 w-full max-w-[100vw] overflow-hidden flex-grow">
-          <Routes> {/* <--- Keeps the routes, relying on the outer Router context */}
+          <Routes>
             
             {/* MAIN PORTFOLIO ROUTE (Single-Scroll Landing Page) */}
             <Route path="/" element={

@@ -181,6 +181,18 @@ const AllProjects = () => {
           </div>
         )}
 
+        {/* --- ADDED BOTTOM FOOTER NAVIGATION CALLOUT --- */}
+        <div className="mt-16 pt-8 border-t border-zinc-800/60 text-center">
+          <p className="text-zinc-500 text-sm mb-4">Finished exploring the archive?</p>
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-zinc-900/40 border border-zinc-800 text-sm text-zinc-300 hover:text-cyan-400 hover:border-cyan-500/30 transition-all font-medium backdrop-blur-sm group"
+          >
+            <span className="inline-block transition-transform group-hover:-translate-x-0.5">&larr;</span> 
+            Return to Home Page
+          </Link>
+        </div>
+
       </div>
     </div>
   );
